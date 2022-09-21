@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Line } from 'react-chartjs-2';
-import pattern from 'patternomaly'
-import { faker } from '@faker-js/faker';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Line } from "react-chartjs-2";
+import pattern from "patternomaly";
+import { faker } from "@faker-js/faker";
+import "./App.css";
 
 import {
   Chart as ChartJS,
@@ -14,18 +14,17 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler
-} from 'chart.js';
-
+  Filler,
+} from "chart.js";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
+  // Title,
   Tooltip,
-  Legend,
+  // Legend,
   Filler
 );
 
@@ -33,67 +32,80 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top' as const,
+      position: "top" as const,
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text: "Chart.js Line Chart",
     },
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = [
+  "Monday",
+  "Tueday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Satuday",
+  "Sunday",
+];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Main',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      label: "Main",
+      data: [3400, 3000, 2500, 4500, 2500, 3400, 3000],
       borderWidth: 3,
-      backgroundColor: 'rgba(255, 0, 0, 0.2)',
-      borderColor: 'red',
-      pointBackgroundColor: "red",
-      pointBorderColor: 'white',
+      backgroundColor: "rgba(195, 40, 96, 0.1)",
+      borderColor: "rgba(195, 40, 96, 1)",
+      pointBackgroundColor: "rgba(195, 40, 96, 1)",
+      pointBorderColor: "#202b33",
       pointBorderWidth: 2,
-      pointHoverBackgroundColor: 'red',
-      pointRadius: 5,
+      pointHoverBackgroundColor: "red",
+      pointRadius: 6,
       tension: 0.5,
       fill: true,
+      pointStrokeColor: "#202b33",
+      pointHighlightStroke: "rgba(225,225,225,0.9)",
     },
     {
-      label: 'Account',
-      data: labels.map(() => faker.datatype.number({ min: 50, max: 1000 })),
+      label: "Account",
+      data: [1900, 1700, 2100, 3600, 2200, 2500, 2000],
       fill: true,
       borderWidth: 3,
-      backgroundColor: 'rgba(255, 255, 0, 0.2)',
-      borderColor: 'yellow',
-      pointBackgroundColor: "yellow",
-      pointBorderColor: 'white',
+      backgroundColor: "rgba(255, 172, 100, 0.1)",
+      borderColor: "rgba(255, 172, 100, 1)",
+      pointBackgroundColor: "rgba(255, 172, 100, 1)",
+      pointBorderColor: "#202b33",
       pointBorderWidth: 2,
-      pointRadius: 5,
-      responsive:true,
-      tension: 0.5
-    },    {
-      label: 'Category',
-      data: labels.map(() => faker.datatype.number({ min: 200, max: 1000 })),
+      pointRadius: 6,
+      responsive: true,
+      tension: 0.5,
+    },
+    {
+      label: "Category",
+      data: [1000, 1400, 1100, 2600, 2000, 900, 1400],
       fill: true,
       borderWidth: 3,
-      backgroundColor: 'rgba(0, 128, 0, 0.2)',
-      borderColor: 'green',
-      pointBackgroundColor: "green",
-      pointBorderColor: 'white',
+      backgroundColor: "rgba(19, 71, 34, 0.3)",
+      borderColor: "rgba(88, 188, 116, 1)",
+      pointBackgroundColor: "rgba(88, 188, 116, 1)",
+      pointBorderColor: "#202b33",
       pointBorderWidth: 2,
-      pointRadius: 5,
-      responsive:true,
-      tension: 0.5
+      pointRadius: 6,
+      responsive: true,
+      tension: 0.5,
     },
   ],
 };
 
 function App() {
   return (
+    <div className="chart">
       <Line options={options} data={data} />
+    </div>
   );
 }
 
