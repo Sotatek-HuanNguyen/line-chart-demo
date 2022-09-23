@@ -39,6 +39,46 @@ export const options = {
       text: "Chart.js Line Chart",
     },
   },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+        color: "rgba(255,255,255,0.1)",
+        borderColor: "black",
+      },
+    },
+    y: {
+      grid: {
+        display: true,
+        color: "rgba(255,255,255,0.1)",
+        borderColor: "black",
+      },
+    },
+    // yAxes: {
+    //   grid: {
+    //     color: "red",
+    //     display: true,
+    //     drawBorder: true,
+    //   },
+    //   ticks: {
+    //     beginAtZero: false,
+    //     color: "aaaaaa",
+    //     // borderColor: "aaaaaa",
+    //     fontSize: 12,
+    //   },
+    // },
+    // xAxes: {
+    //   grid: {
+    //     drawBorder: true,
+    //     color: "#aaaaa",
+    //   },
+    //   ticks: {
+    //     beginAtZero: true,
+    //     color: "aaaaaa",
+    //     fontSize: 12,
+    //   },
+    // },
+  },
 };
 
 const labels = [
