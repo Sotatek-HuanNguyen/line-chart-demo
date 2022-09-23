@@ -54,30 +54,6 @@ export const options = {
         borderColor: "black",
       },
     },
-    // yAxes: {
-    //   grid: {
-    //     color: "red",
-    //     display: true,
-    //     drawBorder: true,
-    //   },
-    //   ticks: {
-    //     beginAtZero: false,
-    //     color: "aaaaaa",
-    //     // borderColor: "aaaaaa",
-    //     fontSize: 12,
-    //   },
-    // },
-    // xAxes: {
-    //   grid: {
-    //     drawBorder: true,
-    //     color: "#aaaaa",
-    //   },
-    //   ticks: {
-    //     beginAtZero: true,
-    //     color: "aaaaaa",
-    //     fontSize: 12,
-    //   },
-    // },
   },
 };
 
